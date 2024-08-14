@@ -22,7 +22,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>最強 App</title>
+    <title>react App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -38,4 +38,33 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box Example</title>
+</head>
+<body>
+    <h1>Enter your text below:</h1>
+    
+    <!-- テキストボックスを作成 -->
+    <input type="text" id="textbox" placeholder="Type something here">
+
+    <!-- 入力したテキストを表示 -->
+    <p>Your text: <span id="displayText"></span></p>
+
+    <script>
+        // テキストボックスと表示エリアを取得
+        const textBox = document.getElementById('textbox');
+        const displayText = document.getElementById('displayText');
+
+        // テキストボックスの内容が変わるたびに表示を更新
+        textBox.addEventListener('input', function() {
+            displayText.textContent = textBox.value;
+        });
+    </script>
+</body>
 </html>
